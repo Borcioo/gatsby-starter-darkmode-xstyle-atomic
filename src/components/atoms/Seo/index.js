@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 
-const metaDesc = "Maxime Bonhomme"
-const metaAuthor = "@pixelarts"
+const metaDesc = "Maciej Barta"
+const metaAuthor = "@Borcioo"
 
 function SEO({ description, lang, meta, title }) {
   const metaDescription = description || metaDesc
@@ -14,7 +14,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate="%s | Maxime Bonhomme"
+      titleTemplate="%s | Maciej Barta"
       meta={[
         {
           name: `description`,
