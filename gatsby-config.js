@@ -2,14 +2,54 @@ module.exports = {
   siteMetadata: {
     title: `Gatsby DarkMode xStyle Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `@Borcioo`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
+      options: {
+        devMode: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `red`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Montserrat",
+              variants: ["300", "400", "500", "600", "700", "800", "900"],
+              subsets: ["latin"],
+              //text: 'Hello'
+              fontDisplay: "swap",
+              strategy: "base64",
+            },
+            {
+              family: "Material Icons",
+              strategy: "base64",
+            },
+          ],
+        },
+        useMinify: true,
+        usePreload: true,
+        usePreconnect: false,
+      },
+    },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
           "@src": "src",
+          "@hooks": "src/hooks",
           "@utils": "src/utils",
           "@components": "src/components",
           "@pages": "src/pages",
@@ -57,8 +97,16 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        develop: false, // Enable while using `gatsby develop`
+        // tailwind: true, // Enable tailwindcss support
+        // whitelist: ['whitelist'], // Don't remove this selector
+        // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
+        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+      },
+    },
   ],
 }

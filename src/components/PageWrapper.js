@@ -1,5 +1,10 @@
 import React from "react"
+import SmoothScroll from "@atoms/SmoothScroll"
 
 export function PageWrapper({ children, props }) {
-  return <main>{children}</main>
+  return (
+    <SmoothScroll>
+      <main>{children}</main>
+    </SmoothScroll>
+  )
 }
