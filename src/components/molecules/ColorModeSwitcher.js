@@ -1,6 +1,6 @@
 import React from "react"
 import { x, useColorMode } from "@xstyled/styled-components"
-import Ico from "@atoms/Icon"
+import Icon from "@atoms/Icon"
 
 const modeIcons = {
   light: "dark_mode",
@@ -30,7 +30,7 @@ export const ColorModeSwitcher = React.forwardRef((props, ref) => {
       onClick={() => setMode(getInverseMode)}
       {...props}
     >
-      <Ico iconName={iconName} style={{ width: 24, height: 24 }} />
+      <Icon icon={iconName} style={{ width: 24, height: 24 }} />
     </x.button>
   )
 })

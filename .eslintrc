@@ -17,6 +17,7 @@
       "alias": {
         "map": [
           ["@src", "./src"],
+          ["@hooks", ".src/hooks"],
           ["@utils", "./src/utils"],
           ["@components", "./src/components"],
           ["@pages", "./src/pages"],
