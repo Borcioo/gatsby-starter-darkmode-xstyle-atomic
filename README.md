@@ -8,6 +8,7 @@
 <h1 align="center">
   Gatsby's xStyled DarkMode Atomic
 </h1>
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/02d90e9b-4b84-49c4-8ed7-e2a3f5fd51ed/deploy-status)](https://app.netlify.com/sites/lucid-payne-d52ded/deploys)
 
 Gatsby starter with good, opinionated defaults.
