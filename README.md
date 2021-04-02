@@ -27,7 +27,7 @@ A complete list of dependencies is in package.json. These are the primary ones:
 
 ## **Styles**
 
- - **xStyled** (powerfull A CSS-in-JS framework):
+ - **xStyled** (powerfull CSS-in-JS framework):
    
     ***CSS-in-JS*** CSS-in-JS allows you to write CSS directly in
    JavaScript. Writing CSS-in-JS has several advantages:
