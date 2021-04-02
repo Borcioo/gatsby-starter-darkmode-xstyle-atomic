@@ -39,6 +39,8 @@ A complete list of dependencies is in package.json. These are the primary ones:
  - **Theme:** 
 	 - xstyled includes a `defaultTheme`, recommended to start a project, it	 includes colors, type scale, fonts, breakpoints, border radii, and more. It is very easy to extends thanks to object spread operator.
 	 - more in `src\utils\theme.js`
+
+
 	~~~scss 
     colors: {
         ...defaultTheme.colors,
@@ -65,7 +67,7 @@ A complete list of dependencies is in package.json. These are the primary ones:
  - **Webfont loader** (config in `gatsby-config.js`)
 	
 	
-	~~~json
+	~~~js
 	{
 	  resolve: `gatsby-plugin-webfonts`,
 	  options: {
@@ -105,7 +107,8 @@ A complete list of dependencies is in package.json. These are the primary ones:
  - **SmoothScroll**
  - **Custom Scrollbar** (css) with `scroll-behavior: smooth;`
  - **Atomic design** with organised directory tree
-![enter image description here](https://i.postimg.cc/QM40zg0r/image.png)
+
+![filetree](https://i.postimg.cc/QM40zg0r/image.png)
 
 ## 🚀 Quick start
 
