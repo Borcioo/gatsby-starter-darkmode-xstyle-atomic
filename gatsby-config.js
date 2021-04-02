@@ -30,7 +30,6 @@ module.exports = {
               family: "Montserrat",
               variants: ["300", "400", "500", "600", "700", "800", "900"],
               subsets: ["latin"],
-              //text: 'Hello'
               fontDisplay: "swap",
               strategy: "base64",
             },
