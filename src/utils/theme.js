@@ -96,6 +96,14 @@ export const theme = {
       user-select: none;
     }
 
+    .filter {
+      filter: none;
+      transition: filter 0.25s linear;
+    }
+    .filter.hueRotate {
+      filter: hue-rotate(107deg);
+    }
+
     .material-icons {
       font-family: "Material Icons";
       font-weight: normal;
@@ -142,6 +150,7 @@ export const theme = {
     scroll: "rgba(0, 0, 0, 0.4)",
     barr: "rgba(0, 0, 0, 0.1)",
     button: "rgba(255, 255, 255, 0.4)",
+
     modes: {
       dark: {
         text: "#fff",

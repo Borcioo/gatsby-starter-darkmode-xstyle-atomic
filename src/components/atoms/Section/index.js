@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { x } from "@xstyled/styled-components"
 
-const section = ({ props, children }) => {
+const section = (props) => {
   return (
     <x.div
       as="section"
@@ -18,8 +18,9 @@ const section = ({ props, children }) => {
       mx="auto"
       h="100vh"
       p={4}
+      {...props}
     >
-      {children}
+      {props.children}
     </x.div>
   )
 }
