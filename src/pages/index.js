@@ -3,7 +3,7 @@ import { ColorModeSwitcher } from "../components/molecules/ColorModeSwitcher"
 import SEO from "@atoms/Seo"
 import { StaticImage } from "gatsby-plugin-image"
 import { x } from "@xstyled/styled-components"
-//import IconSvg from "@atoms/IconSvg"
+import IconSvg from "@atoms/IconSvg"
 import Icon from "@atoms/Icon"
 import Section from "@atoms/Section"
 
@@ -27,7 +27,7 @@ const IndexPage = (props) => {
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
         <p>DarkMode with xStyles</p>
-
+        <IconSvg size="2rem" spin icon="mdiAccount" className="" />
         <Icon size="2rem" icon="person" spin className="test" />
         <x.div maxWidth={300}>
           <StaticImage
