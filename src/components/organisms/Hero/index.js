@@ -43,6 +43,23 @@ const Hero = () => {
   const big = useBreakPoint("(min-width: 25.74rem)")
   const size = useWindowSize()
 
+  const renderHero = () => {
+    if (big) {
+      return <CoverPlayer className="hero-desktop" />
+    }
+    return (
+      <StaticImage
+        src="../../../assets/images/room.jpg"
+        layout="constrained"
+        width={411}
+        height={823}
+        alt="hero"
+        transformOptions={{ fit: "cover" }}
+        className="hero-mobile"
+      />
+    )
+  }
+
   return (
     <>
       <Section
@@ -52,22 +69,26 @@ const Hero = () => {
         backgroundImage="none"
         container={false}
       >
-        {big ? (
-          <CoverPlayer className="hero-desktop" />
-        ) : (
-          <StaticImage
-            src="../../../assets/images/room.jpg"
-            layout="constrained"
-            width={411}
-            height={823}
-            alt="hero"
-            transformOptions={{ fit: "cover" }}
-            className="hero-mobile"
-          />
-        )}
+        {renderHero()}
       </Section>
     </>
   )
 }
 
 export default Hero
+
+// {
+//   big ? (
+//     <CoverPlayer className="hero-desktop" />
+//   ) : (
+//     <StaticImage
+//       src="../../../assets/images/room.jpg"
+//       layout="constrained"
+//       width={411}
+//       height={823}
+//       alt="hero"
+//       transformOptions={{ fit: "cover" }}
+//       className="hero-mobile"
+//     />
+//   )
+// }
