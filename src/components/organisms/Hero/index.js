@@ -5,6 +5,8 @@ import heroVidwebm from "@assets/videos/room.webm"
 import heroVidmp4 from "@assets/videos/room.mp4"
 import styled, { useColorMode, x } from "@xstyled/styled-components"
 import { StaticImage } from "gatsby-plugin-image"
+import useBreakPoint from "@hooks/useBreakPoint"
+import useWindowSize from "@hooks/useWindowSize"
 
 const Player = ({ className }) => (
   <ReactPlayer
@@ -38,6 +40,8 @@ const modeHue = {
 const Hero = () => {
   const [mode] = useColorMode()
   const hue = modeHue[mode]
+  const big = useBreakPoint("(min-width: 25.74rem)")
+  const size = useWindowSize()
 
   return (
     <>
@@ -48,17 +52,19 @@ const Hero = () => {
         backgroundImage="none"
         container={false}
       >
-        <CoverPlayer className="hero-desktop" />
-
-        <StaticImage
-          src="../../../assets/images/room.jpg"
-          layout="constrained"
-          width={411}
-          height={823}
-          alt="hero"
-          transformOptions={{ fit: "cover" }}
-          className="hero-mobile"
-        />
+        {big ? (
+          <CoverPlayer className="hero-desktop" />
+        ) : (
+          <StaticImage
+            src="../../../assets/images/room.jpg"
+            layout="constrained"
+            width={411}
+            height={823}
+            alt="hero"
+            transformOptions={{ fit: "cover" }}
+            className="hero-mobile"
+          />
+        )}
       </Section>
     </>
   )

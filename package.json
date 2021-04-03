@@ -28,6 +28,7 @@
     "materialdesign-js": "^1.0.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0",
     "react-player": "^2.9.0",

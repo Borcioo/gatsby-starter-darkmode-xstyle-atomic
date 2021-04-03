@@ -17,6 +17,10 @@ export default function useWindowSize() {
     width: undefined,
   })
   useEffect(() => {
+    setDimensions({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    })
     const debouncedHandleResize = debounce(function handleResize() {
       setDimensions({
         height: window.innerHeight,
