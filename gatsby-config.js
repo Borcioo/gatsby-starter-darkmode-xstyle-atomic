@@ -28,7 +28,7 @@ module.exports = {
           google: [
             {
               family: "Montserrat",
-              variants: ["300", "400", "500", "600", "700", "800", "900"],
+              variants: ["400", "700", "900"],
               subsets: ["latin"],
               fontDisplay: "swap",
               strategy: "base64",
@@ -41,7 +41,7 @@ module.exports = {
         },
         useMinify: true,
         usePreload: true,
-        usePreconnect: false,
+        usePreconnect: true,
       },
     },
     {

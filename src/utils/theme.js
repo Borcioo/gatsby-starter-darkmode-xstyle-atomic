@@ -8,7 +8,7 @@ export const theme = {
     body {
       transition: 300ms ease-in color, 300ms ease-in background-color;
       margin: 0;
-      font-family: "Montserrat", sans-serif;
+      font-family: "Montserrat", DejaVu Sans, Verdana, sans‑serif;
       background-color: background;
       color: text;
       font-size: 16px;
@@ -162,7 +162,7 @@ export const theme = {
       },
     },
   },
-  fonts: ["Montserrat, sans-serif"],
+  fonts: ["Montserrat, DejaVu Sans, Verdana, sans‑serif"],
   fontSizes: [
     10,
     12,

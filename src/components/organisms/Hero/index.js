@@ -1,7 +1,8 @@
 import React from "react"
 import ReactPlayer from "react-player"
 import Section from "@atoms/Section"
-import heroVid from "@assets/videos/room.mp4"
+import heroVidwebm from "@assets/videos/room.webm"
+import heroVidmp4 from "@assets/videos/room.mp4"
 import styled, { useColorMode } from "@xstyled/styled-components"
 
 const Player = ({ className }) => (
@@ -14,7 +15,10 @@ const Player = ({ className }) => (
     muted
     volume={0}
     playing
-    url={[{ src: heroVid, type: "video/mp4" }]}
+    url={[
+      { src: heroVidwebm, type: "video/webm" },
+      { src: heroVidmp4, type: "video/mp4" },
+    ]}
   />
 )
 
@@ -31,7 +35,7 @@ const modeHue = {
 }
 
 const Hero = () => {
-  const [mode, setMode] = useColorMode()
+  const [mode] = useColorMode()
   const hue = modeHue[mode]
 
   return (
