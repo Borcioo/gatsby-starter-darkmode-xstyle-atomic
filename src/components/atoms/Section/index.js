@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { x } from "@xstyled/styled-components"
 
 const section = (props) => {
@@ -24,7 +23,5 @@ const section = (props) => {
     </x.div>
   )
 }
-
-section.propTypes = {}
 
 export default section

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react"
+import { isBrowser } from "@utils/utils"
 
 function debounce(fn, ms) {
   let timer
@@ -13,14 +14,11 @@ function debounce(fn, ms) {
 
 export default function useWindowSize() {
   const [dimensions, setDimensions] = useState({
-    height: undefined,
-    width: undefined,
+    width: isBrowser ? window.innerWidth : 1200,
+    height: isBrowser ? window.innerHeight : 800,
   })
+
   useEffect(() => {
-    setDimensions({
-      height: window.innerHeight,
-      width: window.innerWidth,
-    })
     const debouncedHandleResize = debounce(function handleResize() {
       setDimensions({
         height: window.innerHeight,

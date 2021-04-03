@@ -19,17 +19,15 @@ export const onRenderBody = ({
 }) => {
   setHeadComponents([
     <link as="script" rel="preload" href="/scripts/preloader.js" />,
-    <noscript>
-      <link rel="stylesheet" href="/styles/noscript.css" />
-    </noscript>,
+
+    <link rel="stylesheet" href="/styles/noscript.css" />,
   ])
 
   setPreBodyComponents([
     getColorModeInitScriptElement(),
 
     <div id="preloader">
-      <img src="/images/logo.png" alt="preloader" width="100" height="100" />
-      <div className="preloader_animation"></div>
+      <div id="terminal"></div>
     </div>,
   ])
   setBodyAttributes({

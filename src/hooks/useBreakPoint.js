@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { isBrowser } from "@utils/utils"
 
 function debounce(fn, ms) {
   let timer
@@ -11,17 +12,16 @@ function debounce(fn, ms) {
   }
 }
 
-export default function useMedia(query) {
-  const [matches, setMatches] = useState()
+const useMedia = (query) => {
+  const [matches, setMatches] = useState(
+    isBrowser ? () => window.matchMedia(query).matches : true
+  )
 
   useEffect(() => {
     const media = window.matchMedia(query)
     setMatches(media.matches)
 
     const debouncedHandleMatches = debounce(function handleResize() {
-      //   if (media.matches !== matches) {
-      //     setMatches(media.matches)
-      //   }
       setMatches(media.matches)
     }, 500)
 
@@ -34,3 +34,4 @@ export default function useMedia(query) {
 
   return matches
 }
+export default useMedia
