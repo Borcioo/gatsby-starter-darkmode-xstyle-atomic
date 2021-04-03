@@ -2,7 +2,6 @@ import React from "react"
 import { ColorModeSwitcher } from "../components/molecules/ColorModeSwitcher"
 import SEO from "@atoms/Seo"
 import { x } from "@xstyled/styled-components"
-import Section from "@atoms/Section"
 import Hero from "@organisms/Hero"
 
 const IndexPage = (props) => {

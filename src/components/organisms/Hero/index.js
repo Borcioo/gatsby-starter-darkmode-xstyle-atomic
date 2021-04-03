@@ -1,9 +1,10 @@
 import React from "react"
-import ReactPlayer from "react-player"
+import ReactPlayer from "react-player/lazy"
 import Section from "@atoms/Section"
 import heroVidwebm from "@assets/videos/room.webm"
 import heroVidmp4 from "@assets/videos/room.mp4"
-import styled, { useColorMode } from "@xstyled/styled-components"
+import styled, { useColorMode, x } from "@xstyled/styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Player = ({ className }) => (
   <ReactPlayer
@@ -39,15 +40,27 @@ const Hero = () => {
   const hue = modeHue[mode]
 
   return (
-    <Section
-      w="100vw"
-      className={hue}
-      p={0}
-      backgroundImage="none"
-      container={false}
-    >
-      <CoverPlayer />
-    </Section>
+    <>
+      <Section
+        w="100vw"
+        className={hue}
+        p={0}
+        backgroundImage="none"
+        container={false}
+      >
+        <CoverPlayer className="hero-desktop" />
+
+        <StaticImage
+          src="../../../assets/images/room.jpg"
+          layout="constrained"
+          width={411}
+          height={823}
+          alt="hero"
+          transformOptions={{ fit: "cover" }}
+          className="hero-mobile"
+        />
+      </Section>
+    </>
   )
 }
 
