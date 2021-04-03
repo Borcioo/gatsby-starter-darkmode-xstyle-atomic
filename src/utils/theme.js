@@ -103,7 +103,18 @@ export const theme = {
     .filter.hueRotate {
       filter: hue-rotate(107deg);
     }
-
+    .hero-mobile {
+      height: 100%;
+      @media (min-width: 25.74rem) {
+        display: none !important;
+      }
+    }
+    .hero-desktop {
+      display: none;
+      @media (min-width: 25.75rem) {
+        display: block;
+      }
+    }
     .material-icons {
       font-family: "Material Icons";
       font-weight: normal;
@@ -133,8 +144,9 @@ export const theme = {
     rootFontSize: 16,
   },
 
-  breakpoints: {
+  screens: {
     xs: 0,
+    s: 375,
     sm: 576,
     md: 768,
     lg: 992,

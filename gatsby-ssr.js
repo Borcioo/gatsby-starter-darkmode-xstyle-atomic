@@ -28,12 +28,7 @@ export const onRenderBody = ({
     getColorModeInitScriptElement(),
 
     <div id="preloader">
-      {/* Optional: */}
-      <img
-        src="/images/logo.png"
-        alt="logo"
-        style={{ height: "calc(3.23625vw + 77.86408px)" }}
-      />
+      <img src="/images/logo.png" alt="preloader" width="100" height="100" />
       <div className="preloader_animation"></div>
     </div>,
   ])

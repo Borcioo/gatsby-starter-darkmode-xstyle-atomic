@@ -1,9 +1,7 @@
 import React from "react"
 import { ColorModeSwitcher } from "../components/molecules/ColorModeSwitcher"
 import SEO from "@atoms/Seo"
-import { StaticImage } from "gatsby-plugin-image"
 import { x } from "@xstyled/styled-components"
-import Icon from "@atoms/Icon"
 import Section from "@atoms/Section"
 import Hero from "@organisms/Hero"
 
@@ -24,7 +22,6 @@ const IndexPage = (props) => {
         <ColorModeSwitcher />
       </x.div>
       <Hero />
-      <Section />
     </>
   )
 }

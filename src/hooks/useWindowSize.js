@@ -1,25 +1,33 @@
-import { useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
+
+function debounce(fn, ms) {
+  let timer
+  return (_) => {
+    clearTimeout(timer)
+    timer = setTimeout((_) => {
+      timer = null
+      fn.apply(this, arguments)
+    }, ms)
+  }
+}
 
 export default function useWindowSize() {
-  const [windowSize, setWindowSize] = useState({
-    width: undefined,
+  const [dimensions, setDimensions] = useState({
     height: undefined,
+    width: undefined,
   })
-
   useEffect(() => {
-    function handleResize() {
-      setWindowSize({
-        width: window.innerWidth,
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
         height: window.innerHeight,
+        width: window.innerWidth,
       })
-    }
+    }, 1000)
 
-    window.addEventListener("resize", handleResize)
+    window.addEventListener("resize", debouncedHandleResize)
 
-    handleResize()
-
-    return () => window.removeEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", debouncedHandleResize)
   }, [])
 
-  return windowSize
+  return dimensions
 }
