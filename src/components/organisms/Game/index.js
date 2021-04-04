@@ -21,8 +21,8 @@ function Game() {
   const [restart, setrestart] = useState(false)
 
   let playerScore = 0
-  let interval = 0
-  let result = 0
+  let interval = null
+  let result = null
 
   const scoreCounter = () => {
     playerScore++
@@ -35,8 +35,14 @@ function Game() {
     setRoadActive("roadActive")
     setClaudsActive("claudsActive")
     setrestart(true)
+
+    clearInterval(interval)
+    clearInterval(result)
+
     interval = null
     result = null
+    playerScore = 0
+
     result = setInterval(EndGame, 100)
     interval = setInterval(scoreCounter, 500)
   }
