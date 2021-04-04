@@ -54,6 +54,8 @@ function Game() {
       setScore(0)
       clearInterval(interval)
       clearInterval(result)
+      interval = null
+      result = null
     }
   }
 
