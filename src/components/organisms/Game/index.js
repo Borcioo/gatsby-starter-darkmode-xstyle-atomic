@@ -35,6 +35,8 @@ function Game() {
     setRoadActive("roadActive")
     setClaudsActive("claudsActive")
     setrestart(true)
+    interval = null
+    result = null
     result = setInterval(EndGame, 100)
     interval = setInterval(scoreCounter, 500)
   }
@@ -51,8 +53,6 @@ function Game() {
       setClaudsActive("")
       setScore(0)
       clearInterval(interval)
-      clearInterval(interval)
-      clearInterval(result)
       clearInterval(result)
     }
   }
