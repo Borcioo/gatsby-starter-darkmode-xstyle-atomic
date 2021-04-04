@@ -7,6 +7,7 @@ import styled, { useColorMode, x } from "@xstyled/styled-components"
 import { StaticImage } from "gatsby-plugin-image"
 import useBreakPoint from "@hooks/useBreakPoint"
 import useWindowSize from "@hooks/useWindowSize"
+import Game from "@organisms/Game"
 
 const Player = ({ className }) => (
   <ReactPlayer

@@ -18,9 +18,7 @@ export const onRenderBody = ({
   setPostBodyComponents,
 }) => {
   setHeadComponents([
-    <link as="script" rel="preload" href="/scripts/preloader.js" />,
-
-    <link rel="stylesheet" href="/styles/noscript.css" />,
+    // <link as="script" rel="preload" href="/scripts/preloader.js" />,
   ])
 
   setPreBodyComponents([
@@ -33,5 +31,5 @@ export const onRenderBody = ({
   setBodyAttributes({
     className: "preloader_active",
   })
-  setPostBodyComponents([<script src="/scripts/preloader.js" />])
+  // setPostBodyComponents([<script src="/scripts/preloader.js" />])
 }

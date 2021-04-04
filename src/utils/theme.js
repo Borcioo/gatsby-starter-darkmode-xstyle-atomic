@@ -139,6 +139,202 @@ export const theme = {
       /* Support for IE. */
       font-feature-settings: "liga";
     }
+
+    #container {
+      height: 400px;
+      width: 1200px;
+      position: relative;
+      overflow: hidden;
+      transform: scale(1.6);
+    }
+
+    #container #dino {
+      height: 90px;
+      width: 90px;
+      position: absolute;
+      bottom: 28px;
+      left: 20px;
+    }
+
+    #container #dino img {
+      height: 90px;
+      width: 90px;
+    }
+
+    .dinoActive {
+      animation: animateDino 0.65s 1 linear;
+    }
+    .roadActive {
+      animation: roadAnimate 10s linear infinite;
+    }
+    .cloudActive {
+      animation: cloudAnimate 20s linear infinite;
+    }
+
+    @keyframes animateDino {
+      0% {
+        bottom: 28px;
+        transform: skewX(-10deg);
+      }
+      20% {
+        bottom: 160px;
+        transform: skewX(-5deg);
+      }
+      50% {
+        transform: translateY(-50%) skewX(0deg);
+        border-radius: 50%;
+      }
+      85% {
+        bottom: 160px;
+        transform: skewX(5deg);
+      }
+      100% {
+        transform: skewX(15deg);
+        bottom: 28px;
+      }
+    }
+
+    #container #block {
+      height: 125px;
+      width: 125px;
+      position: absolute;
+      bottom: 5px;
+      right: -20px;
+    }
+
+    #container #block img {
+      height: 125px;
+      width: 125px;
+    }
+
+    .blockActive {
+      animation: blockAnimate 3s linear infinite;
+    }
+
+    @keyframes blockAnimate {
+      0% {
+        right: -125px;
+      }
+
+      100% {
+        right: 100%;
+      }
+    }
+
+    #container #road {
+      height: 400px;
+      width: 4000px;
+      position: absolute;
+      bottom: 0;
+    }
+
+    #container #road img {
+      height: 400px;
+      width: 4000px;
+      position: absolute;
+      left: 0;
+      animation: none;
+    }
+
+    @keyframes roadAnimate {
+      0% {
+        left: 0;
+      }
+
+      100% {
+        left: -2800px;
+      }
+    }
+
+    #container {
+      #cloud1 img {
+        left: -1000px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 0px;
+      }
+      #cloud2 img {
+        left: -1000px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 82px;
+        animation-delay: 1s;
+      }
+      #cloud3 img {
+        left: -1000px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 50px;
+        animation-delay: 2s;
+      }
+      #cloud4 img {
+        left: -1000px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 28px;
+        animation-delay: 3s;
+      }
+      #cloud5 img {
+        left: -1000px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 125px;
+        animation-delay: 4s;
+      }
+    }
+    .claudsActive img {
+      animation: cloudAnimate 20s linear infinite;
+      filter: drop-shadow(37px 353px 10px black);
+    }
+
+    @keyframes cloudAnimate {
+      0% {
+        transform: translateY(30px);
+        left: -1000px;
+      }
+
+      50% {
+        transform: translateY(0px);
+      }
+
+      100% {
+        transform: translateY(30px);
+        left: 100%;
+      }
+    }
+
+    #score {
+      height: auto;
+      width: auto;
+      position: absolute;
+      top: 20px;
+      right: 0;
+    }
+
+    #gameOver {
+      display: none;
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      height: 400px;
+      width: 400px;
+      transform: translateY(-50%) translateX(-50%);
+
+      img {
+        height: 400px;
+        width: 400px;
+        filter: invert(1);
+      }
+    }
+    .gameOver {
+      display: block !important;
+    }
   `,
   settings: {
     rootFontSize: 16,
