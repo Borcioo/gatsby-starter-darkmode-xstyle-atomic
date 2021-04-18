@@ -1,31 +1,15 @@
 import React from "react"
-import { ColorModeSwitcher } from "../components/molecules/ColorModeSwitcher"
-import SEO from "@atoms/Seo"
+import { ColorModeSwitcher } from "../components/webpage/molecules/ColorModeSwitcher"
 import { x } from "@xstyled/styled-components"
-import Game from "@organisms/Game"
+import MainGame from "@Gorganisms"
 import Section from "@atoms/Section"
 
-const DinoGame = (props) => {
+const Game = (props) => {
   return (
-    <>
-      <SEO lang="en" title="Home" />
-      <x.div
-        as="header"
-        display="flex"
-        justifyContent="flex-end"
-        w="100vw"
-        px={4}
-        py={1}
-        zIndex={2}
-        position="absolute"
-      >
-        <ColorModeSwitcher />
-      </x.div>
-      <Section w="100vw" p={0} backgroundImage="none" container={false}>
-        <Game />
-      </Section>
-    </>
+    <Section w="100vw" p={0} backgroundImage="none" container={false}>
+      <MainGame />
+    </Section>
   )
 }
 
-export default DinoGame
+export default Game

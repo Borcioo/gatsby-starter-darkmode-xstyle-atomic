@@ -17,17 +17,26 @@
                 "src/components/*"
             ],
             "@atoms/*": [
-                "src/components/atoms/*"
+                "src/components/webpage/atoms/*"
             ],
             "@molecules/*": [
-                "src/components/molecules/*"
+                "src/components/webpage/molecules/*"
             ],
             "@organisms/*": [
-                "src/components/organisms/*"
+                "src/components/webpage/organisms/*"
             ],
             "@assets/*": [
                 "src/assets/*"
             ],   
+            "@Gatoms/*": [
+                "src/components/game/atoms/*"
+            ],
+            "@Gmolecules/*": [
+                "src/components/game/molecules/*"
+            ],
+            "@Gorganisms/*": [
+                "src/components/game/organisms/*"
+            ],
         },
     },
 "exclude": [

@@ -1,13 +1,11 @@
 import React from "react"
-import { ColorModeSwitcher } from "../components/molecules/ColorModeSwitcher"
-import SEO from "@atoms/Seo"
+import { ColorModeSwitcher } from "../components/webpage/molecules/ColorModeSwitcher"
 import { x } from "@xstyled/styled-components"
 import Hero from "@organisms/Hero"
 
 const IndexPage = (props) => {
   return (
     <>
-      <SEO lang="en" title="Home" />
       <x.div
         as="header"
         display="flex"
